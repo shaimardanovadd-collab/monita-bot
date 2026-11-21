@@ -1,0 +1,702 @@
+{
+ "sections": {
+  "A": {
+   "emoji": "🌾",
+   "uz": "Qishloq, oʻrmon va baliq xoʻjaligi",
+   "ru": "Сельское, лесное, рыбное хоз-во",
+   "uz_full": "Qishloq, oʻrmon va baliq xoʻjaligi",
+   "divisions": [
+    "01",
+    "02",
+    "03"
+   ]
+  },
+  "B": {
+   "emoji": "⛏",
+   "uz": "Togʻ-kon sanoati",
+   "ru": "Горнодобывающая промышленность",
+   "uz_full": "Togʻ-kon sanoati va ochiq konlarni ishlash",
+   "divisions": [
+    "05",
+    "06",
+    "07",
+    "08",
+    "09"
+   ]
+  },
+  "C": {
+   "emoji": "🏭",
+   "uz": "Ishlab chiqarish (sanoat)",
+   "ru": "Обрабатывающая промышленность",
+   "uz_full": "Ishlab chiqaradigan sanoat",
+   "divisions": [
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31",
+    "32",
+    "33"
+   ]
+  },
+  "D": {
+   "emoji": "⚡",
+   "uz": "Elektr, gaz, bugʻ taʼminoti",
+   "ru": "Электро-, газо-, пароснабжение",
+   "uz_full": "Elektr, gaz, bugʻ bilan taʼminlash va havoni konditsiyalash",
+   "divisions": [
+    "35"
+   ]
+  },
+  "E": {
+   "emoji": "💧",
+   "uz": "Suv, kanalizatsiya, chiqindilar",
+   "ru": "Водоснабжение, канализация, отходы",
+   "uz_full": "Suv bilan taʼminlash; kanalizatsiya tizimi, chiqindilarni yigʻish va utilizatsiya qilish",
+   "divisions": [
+    "36",
+    "37",
+    "38",
+    "39"
+   ]
+  },
+  "F": {
+   "emoji": "🏗",
+   "uz": "Qurilish",
+   "ru": "Строительство",
+   "uz_full": "Qurilish",
+   "divisions": [
+    "41",
+    "42",
+    "43"
+   ]
+  },
+  "G": {
+   "emoji": "🏪",
+   "uz": "Ulgurji va chakana savdo",
+   "ru": "Оптовая и розничная торговля",
+   "uz_full": "Ulgurji va chakana savdo; motorli transport vositalari va mototsikllarni taʼmirlash",
+   "divisions": [
+    "45",
+    "46",
+    "47"
+   ]
+  },
+  "H": {
+   "emoji": "🚚",
+   "uz": "Tashish va saqlash (logistika)",
+   "ru": "Перевозка и хранение",
+   "uz_full": "Tashish va saqlash",
+   "divisions": [
+    "49",
+    "50",
+    "51",
+    "52",
+    "53"
+   ]
+  },
+  "I": {
+   "emoji": "🍽",
+   "uz": "Mehmonxona va umumiy ovqatlanish",
+   "ru": "Гостиницы и общепит",
+   "uz_full": "Yashash va ovqatlanish boʻyicha xizmatlar",
+   "divisions": [
+    "55",
+    "56"
+   ]
+  },
+  "J": {
+   "emoji": "💻",
+   "uz": "Axborot va aloqa (IT)",
+   "ru": "Информация и связь (IT)",
+   "uz_full": "Axborot va aloqa",
+   "divisions": [
+    "58",
+    "59",
+    "60",
+    "61",
+    "62",
+    "63"
+   ]
+  },
+  "K": {
+   "emoji": "🏦",
+   "uz": "Moliya va sugʻurta",
+   "ru": "Финансы и страхование",
+   "uz_full": "Moliyaviy va sugʻurta faoliyati",
+   "divisions": [
+    "64",
+    "65",
+    "66"
+   ]
+  },
+  "L": {
+   "emoji": "🏢",
+   "uz": "Koʻchmas mulk",
+   "ru": "Недвижимость",
+   "uz_full": "Koʻchmas mulk bilan operatsiyalar",
+   "divisions": [
+    "68"
+   ]
+  },
+  "M": {
+   "emoji": "🔬",
+   "uz": "Professional, ilmiy, texnik faoliyat",
+   "ru": "Профессиональные и научные услуги",
+   "uz_full": "Professional, ilmiy va texnik faoliyat",
+   "divisions": [
+    "69",
+    "70",
+    "71",
+    "72",
+    "73",
+    "74",
+    "75"
+   ]
+  },
+  "N": {
+   "emoji": "🧳",
+   "uz": "Maʼmuriy xizmatlar, turizm",
+   "ru": "Административные услуги, туризм",
+   "uz_full": "Boshqarish boʻyicha faoliyat va yordamchi xizmatlar koʻrsatish",
+   "divisions": [
+    "77",
+    "78",
+    "79",
+    "80",
+    "81",
+    "82"
+   ]
+  },
+  "O": {
+   "emoji": "🏛",
+   "uz": "Davlat boshqaruvi",
+   "ru": "Госуправление",
+   "uz_full": "Davlat boshqaruvi va mudofaa; majburiy ijtimoiy taʼminot",
+   "divisions": [
+    "84"
+   ]
+  },
+  "P": {
+   "emoji": "🎓",
+   "uz": "Taʼlim",
+   "ru": "Образование",
+   "uz_full": "Taʼlim",
+   "divisions": [
+    "85"
+   ]
+  },
+  "Q": {
+   "emoji": "🏥",
+   "uz": "Sogʻliqni saqlash",
+   "ru": "Здравоохранение и соцуслуги",
+   "uz_full": "Sogʻliqni saqlash va ijtimoiy xizmatlar koʻrsatish",
+   "divisions": [
+    "86",
+    "87",
+    "88"
+   ]
+  },
+  "R": {
+   "emoji": "🎭",
+   "uz": "Sanʼat, koʻngilochar, dam olish",
+   "ru": "Искусство, развлечения, отдых",
+   "uz_full": "Sanʼat, koʻngil ochish va dam olish",
+   "divisions": [
+    "90",
+    "91",
+    "92",
+    "93"
+   ]
+  },
+  "S": {
+   "emoji": "🧰",
+   "uz": "Boshqa xizmatlar",
+   "ru": "Прочие услуги",
+   "uz_full": "Boshqa turdagi xizmatlar koʻrsatish",
+   "divisions": [
+    "94",
+    "95",
+    "96"
+   ]
+  },
+  "T": {
+   "emoji": "🏠",
+   "uz": "Uy xoʻjaliklari faoliyati",
+   "ru": "Деятельность домохозяйств",
+   "uz_full": "Uy xizmatchilari yollovchi va oʻz isteʼmoli uchun tovarlar va xizmatlar ishlab chiqaruvchi uy xoʻjaliklari faoliyati",
+   "divisions": [
+    "97",
+    "98"
+   ]
+  },
+  "U": {
+   "emoji": "🌐",
+   "uz": "Eksterritorial tashkilotlar",
+   "ru": "Экстерриториальные организации",
+   "uz_full": "Eksterritorial tashkilotlar faoliyati",
+   "divisions": [
+    "99"
+   ]
+  }
+ },
+ "divisions": {
+  "01": {
+   "s": "A",
+   "ru": "Растениеводство и животноводство, охота и предоставление услуг в этих областях",
+   "uz": "Dehqonchilik va chorvachilik, ovchilik va bu sohalarda xizmat koʻrsatish"
+  },
+  "02": {
+   "s": "A",
+   "ru": "Лесоводство и лесозаготовки",
+   "uz": "Oʻrmonchilik va yogʻoch tayyorlash"
+  },
+  "03": {
+   "s": "A",
+   "ru": "Рыболовство и аквакультура",
+   "uz": "Baliq ovlash va akvakultura"
+  },
+  "05": {
+   "s": "B",
+   "ru": "Добыча угля и лигнита",
+   "uz": "Koʻmir va lignit qazib olish"
+  },
+  "06": {
+   "s": "B",
+   "ru": "Добыча сырой нефти и природного газа",
+   "uz": "Xom neft va tabiiy gaz qazib olish"
+  },
+  "07": {
+   "s": "B",
+   "ru": "Добыча металлических руд",
+   "uz": "Metall rudalarini qazib olish"
+  },
+  "08": {
+   "s": "B",
+   "ru": "Прочая деятельность горнодобывающей промышленности",
+   "uz": "Togʻ-kon sanoati bilan bogʻliq boshqa faoliyat"
+  },
+  "09": {
+   "s": "B",
+   "ru": "Технические услуги в области горнодобывающей промышленности",
+   "uz": "Togʻ-kon sanoati sohasidagi texnik xizmatlar"
+  },
+  "10": {
+   "s": "C",
+   "ru": "Производство продуктов питания",
+   "uz": "Oziq-ovqat mahsulotlari ishlab chiqarish"
+  },
+  "11": {
+   "s": "C",
+   "ru": "Производство напитков",
+   "uz": "Ichimliklar ishlab chiqarish"
+  },
+  "12": {
+   "s": "C",
+   "ru": "Производство табачных изделий",
+   "uz": "Tamaki mahsulotlari ishlab chiqarish"
+  },
+  "13": {
+   "s": "C",
+   "ru": "Производство текстильных изделий",
+   "uz": "Toʻqimachilik mahsulotlari ishlab chiqarish"
+  },
+  "14": {
+   "s": "C",
+   "ru": "Производство одежды",
+   "uz": "Kiyim ishlab chiqarish"
+  },
+  "15": {
+   "s": "C",
+   "ru": "Производство кожаной и относящейся к ней продукции",
+   "uz": "Teri va unga tegishli mahsulotlar ishlab chiqarish"
+  },
+  "16": {
+   "s": "C",
+   "ru": "Производство деревянных и пробковых изделий, (кроме мебели), изделий из соломки и материалов для плетения",
+   "uz": "Yogʻoch va poʻkak buyumlar (mebeldan tashqari), pohol va toʻqish uchun materiallardan buyumlar ishlab chiqarish"
+  },
+  "17": {
+   "s": "C",
+   "ru": "Производство бумаги и бумажной продукции",
+   "uz": "Qogʻoz va qogʻoz mahsulotlari ishlab chiqarish"
+  },
+  "18": {
+   "s": "C",
+   "ru": "Печать и воспроизведение записанных материалов",
+   "uz": "Yozilgan materiallarni nashr qilish va aks ettirish"
+  },
+  "19": {
+   "s": "C",
+   "ru": "Производство кокса и продуктов нефтепереработки",
+   "uz": "Koks va neftni qayta ishlash mahsulotlari ishlab chiqarish"
+  },
+  "20": {
+   "s": "C",
+   "ru": "Производство химической продукции",
+   "uz": "Kimyo mahsulotlari ishlab chiqarish"
+  },
+  "21": {
+   "s": "C",
+   "ru": "Производство основных фармацевтических продуктов и препаратов",
+   "uz": "Asosiy farmatsevtika mahsulotlari va preparatlari ishlab chiqarish"
+  },
+  "22": {
+   "s": "C",
+   "ru": "Производство резиновых и пластмассовых изделий",
+   "uz": "Rezina va plastmassa buyumlar ishlab chiqarish"
+  },
+  "23": {
+   "s": "C",
+   "ru": "Производство прочей неметаллической минеральной продукции",
+   "uz": "Boshqa nometall mineral mahsulotlar ishlab chiqarish"
+  },
+  "24": {
+   "s": "C",
+   "ru": "Металлургическая промышленность",
+   "uz": "Metallurgiya sanoati"
+  },
+  "25": {
+   "s": "C",
+   "ru": "Производство готовых металлических изделий, кроме машин и оборудования",
+   "uz": "Mashina va uskunalardna tashqari tayyor metall buyumlar ishlab chiqarish"
+  },
+  "26": {
+   "s": "C",
+   "ru": "Производство компьютеров, электронной и оптической продукции",
+   "uz": "Kompyuterlar, elektron va optik mahsulotlar ishlab chiqarish"
+  },
+  "27": {
+   "s": "C",
+   "ru": "Производство электрического оборудования",
+   "uz": "Elektr uskunalar ishlab chiqarish"
+  },
+  "28": {
+   "s": "C",
+   "ru": "Производство машин и оборудования, не включенных в другие категории",
+   "uz": "Boshqa toifalarga kiritilmagan mashina va uskunalar ishlab chiqarish"
+  },
+  "29": {
+   "s": "C",
+   "ru": "Производство автотранспортных средств, трейлеров и полуприцепов",
+   "uz": "Avtotransport vositalari, treylerlar va yarim pritseplar ishlab chiqarish"
+  },
+  "30": {
+   "s": "C",
+   "ru": "Производство прочего транспортного оборудования",
+   "uz": "Boshqa transport uchkunalari ishlab chiqarish"
+  },
+  "31": {
+   "s": "C",
+   "ru": "Производство мебели",
+   "uz": "Mebel ishlab chiqarish"
+  },
+  "32": {
+   "s": "C",
+   "ru": "Производство прочих готовых изделий",
+   "uz": "Boshqa tayyor buyumlar ishlab chiqarish"
+  },
+  "33": {
+   "s": "C",
+   "ru": "Ремонт и установка машин и оборудования",
+   "uz": "Mashina va uskunalarni taʼmirlash va oʻrnatish"
+  },
+  "35": {
+   "s": "D",
+   "ru": "Электроснабжение, подача газа, пара и кондиционирование воздуха",
+   "uz": "Elektr, gaz, bugʻ bilan taʼminlash va havoni konditsiyalash"
+  },
+  "36": {
+   "s": "E",
+   "ru": "Сбор, обработка и распределение воды",
+   "uz": "Suvni yigʻish, qayta ishlash va taqsimlash"
+  },
+  "37": {
+   "s": "E",
+   "ru": "Канализационная система",
+   "uz": "Kanalizatsiya tizimi"
+  },
+  "38": {
+   "s": "E",
+   "ru": "Сбор, обработка, удаление, утилизация отходов",
+   "uz": "Chiqindilarni yigʻish, ishlov berish, yoʻqotish, utilizatsiya qilish"
+  },
+  "39": {
+   "s": "E",
+   "ru": "Восстановление и прочие услуги в области удаления отходов",
+   "uz": "Tiklash va chiqindilarni yoʻqotish sohasidagi boshqa xizmatlar"
+  },
+  "41": {
+   "s": "F",
+   "ru": "Строительство зданий и сооружений",
+   "uz": "Binolar va inshootlar qurish"
+  },
+  "42": {
+   "s": "F",
+   "ru": "Строительство объектов гражданского назначения",
+   "uz": "Fuqarolik obʼektlarini qurish"
+  },
+  "43": {
+   "s": "F",
+   "ru": "Специализированные строительные работы",
+   "uz": "Ixtisoslashtirilgan qurilish ishlari"
+  },
+  "45": {
+   "s": "G",
+   "ru": "Оптовая и розничная торговля автомобилями и мотоциклами и их ремонт",
+   "uz": "Avtomobil va mototsikllarning ulgurji va chakana savdosi va ularni taʼmirlash"
+  },
+  "46": {
+   "s": "G",
+   "ru": "Оптовая торговля, кроме торговли автомобилями и мотоциклами",
+   "uz": "Avtomobillar va mototsikllar savdosidan tashqari ulgurji savdo"
+  },
+  "47": {
+   "s": "G",
+   "ru": "Розничная торговля, кроме торговли автомобилями и мотоциклами",
+   "uz": "Avtomobillar va mototsikllar savdosidan tashqari chakana savdo"
+  },
+  "49": {
+   "s": "H",
+   "ru": "Сухопутный и трубопроводный транспорт",
+   "uz": "Quruqlikdagi va quvur transporti"
+  },
+  "50": {
+   "s": "H",
+   "ru": "Водный транспорт",
+   "uz": "Suv transporti"
+  },
+  "51": {
+   "s": "H",
+   "ru": "Воздушный транспорт",
+   "uz": "Havo transporti"
+  },
+  "52": {
+   "s": "H",
+   "ru": "Складское хозяйство и вспомогательная транспортная деятельность",
+   "uz": "Ombor xoʻjaligi va yordamchi transport faoliyati"
+  },
+  "53": {
+   "s": "H",
+   "ru": "Почтовая и курьерская деятельность",
+   "uz": "Pochta va kurerlik faoliyati"
+  },
+  "55": {
+   "s": "I",
+   "ru": "Услуги проживания",
+   "uz": "Yashash boʻyicha xizmatlar"
+  },
+  "56": {
+   "s": "I",
+   "ru": "Услуги по предоставлению продуктов питания и напитков",
+   "uz": "Oziq-ovqat mahsulotlari va ichimliklar yetkazish boʻyicha xizmatlar"
+  },
+  "58": {
+   "s": "J",
+   "ru": "Издательская деятельность",
+   "uz": "Nashriyotchilik faoliyati"
+  },
+  "59": {
+   "s": "J",
+   "ru": "Производство кино- видеофильмов, телевизионных программ, фонограмм и музыкальных записей",
+   "uz": "Kino-videofilmlar, televizion dasturlar, fonogrammalar va musiqali yozuvlarni ishlab chiqarish"
+  },
+  "60": {
+   "s": "J",
+   "ru": "Деятельность по созданию программ и телерадиовещание",
+   "uz": "Dasturlar yaratish boʻyicha faoliyat va telekoʻrsatuv va radioeshittirish"
+  },
+  "61": {
+   "s": "J",
+   "ru": "Связь",
+   "uz": "Aloqa"
+  },
+  "62": {
+   "s": "J",
+   "ru": "Компьютерное программирование, консультации и другие сопутствующие услуги",
+   "uz": "Kompyuter dasturlashtirish, maslahat berish va boshqa yordamchi xizmatlar"
+  },
+  "63": {
+   "s": "J",
+   "ru": "Деятельность в области информационного обслуживания",
+   "uz": "Axborot xizmati koʻrsatish sohasidagi faoliyat"
+  },
+  "64": {
+   "s": "K",
+   "ru": "Финансовые услуги, кроме услуг по страхованию и пенсионному обеспечению",
+   "uz": "Sugʻurtalash va nafaqa taʼminoti boʻyicha xizmatlardan tashqari moliyaviy xizmatlar"
+  },
+  "65": {
+   "s": "K",
+   "ru": "Страхование, перестрахование и деятельность пенсионных фондов, кроме обязательного социального страхования",
+   "uz": "Majburiy ijtimoiy sugʻurtalashdan tashqari sugʻurtalash, qayta sugʻurtalash va nafaqa jamgʻarmalari faoliyati"
+  },
+  "66": {
+   "s": "K",
+   "ru": "Вспомогательная деятельность по предоставлению О компании офертауслуг",
+   "uz": "Moliyaviy xizmatlar koʻrsatish va sugʻurtalash boʻyicha yordamchi faoliyat"
+  },
+  "68": {
+   "s": "L",
+   "ru": "Операции с недвижимым имуществом",
+   "uz": "Koʻchmas mulk bilan operatsiyalar"
+  },
+  "69": {
+   "s": "M",
+   "ru": "Деятельность в области права и бухгалтерского учета",
+   "uz": "Huquq va buxgalterlik hisobi sohasidagi faoliyat"
+  },
+  "70": {
+   "s": "M",
+   "ru": "Деятельность головных компаний; консультации по вопросам",
+   "uz": "Bosh kompaniyalar faoliyati; boshqarish masalalari boʻyicha maslahat berish"
+  },
+  "71": {
+   "s": "M",
+   "ru": "Деятельность в области архитектуры, инженерных изысканий, технических испытаний и анализа",
+   "uz": "Meʼmorchilik, muxandislik izlanishlari, texnik sinovlar va tahlil sohasidagi faoliyat"
+  },
+  "72": {
+   "s": "M",
+   "ru": "Научные исследования и разработки",
+   "uz": "Ilmiy tadqiqotlar va ishlanmalar"
+  },
+  "73": {
+   "s": "M",
+   "ru": "Рекламная деятельность и изучение конъюнктуры рынка",
+   "uz": "Reklama faoliyati va bozor konʼyunkturasini oʻrganish"
+  },
+  "74": {
+   "s": "M",
+   "ru": "Прочая профессиональная, научная и техническая деятельность",
+   "uz": "Boshqa professional, ilmiy va texnika faoliyati"
+  },
+  "75": {
+   "s": "M",
+   "ru": "Ветеринарная деятельность",
+   "uz": "Veterinariya faoliyati"
+  },
+  "77": {
+   "s": "N",
+   "ru": "Аренда, прокат, лизинг",
+   "uz": "Ijara, prokat, lizing"
+  },
+  "78": {
+   "s": "N",
+   "ru": "Трудоустройство",
+   "uz": "Ishga joylashtirish"
+  },
+  "79": {
+   "s": "N",
+   "ru": "Деятельность туроператоров, турагентов и прочих организаций, предоставляющих услуги в сфере туризма",
+   "uz": "Turoperatorlar, turagentlar va boshqa turizm sohasida xizmat koʻrsatuvchi tashkilotlar faoliyati"
+  },
+  "80": {
+   "s": "N",
+   "ru": "Деятельность по обеспечению безопасности и расследованиям",
+   "uz": "Xavfsizlikni taʼminlash va surishtiruv oʻtkazish boʻyicha faoliyat"
+  },
+  "81": {
+   "s": "N",
+   "ru": "Деятельность по обслуживанию зданий и благоустройству ландшафта",
+   "uz": "Binolarga xizmat koʻrsatish va landshaftni obodonlashtirish boʻyicha faoliyat"
+  },
+  "82": {
+   "s": "N",
+   "ru": "Деятельность в области административно-управленческого, хозяйственного и прочего вспомогательного обслуживания",
+   "uz": "Maʼmuriy-boshqaruv, xoʻjalik va boshqa yordamchi xizmat koʻrsatish sohasidagi faoliyat"
+  },
+  "84": {
+   "s": "O",
+   "ru": "Государственное управление и оборона; обязательное",
+   "uz": "Davlat Vы naxodites v nekommercheskoy versii boshqaruvi sistemы Norma.vaKupite mudofaa; majburiy produkt ijtimoiy ili vospolzuytes demonstratsionnыm dostupom taʼminot"
+  },
+  "85": {
+   "s": "P",
+   "ru": "Образование",
+   "uz": "Taʼlim"
+  },
+  "86": {
+   "s": "Q",
+   "ru": "Деятельность в области здравоохранения",
+   "uz": "Sogʻliqni saqlash sohasidagi faoliyat"
+  },
+  "87": {
+   "s": "Q",
+   "ru": "Предоставление ухода с обеспечением проживания",
+   "uz": "Yashash uchun joy bilan taʼminlagan holda parvarishlash"
+  },
+  "88": {
+   "s": "Q",
+   "ru": "Предоставление социальных услуг без обеспечения проживания",
+   "uz": "Yashash uchun joy bilan taʼminlamagan holda ijtimoiy xizmatlar koʻrsatish"
+  },
+  "90": {
+   "s": "R",
+   "ru": "Деятельность в области творчества, искусства и развлечений",
+   "uz": "Ijod, sanʼat va koʻngil ochish sohasidagi faoliyat"
+  },
+  "91": {
+   "s": "R",
+   "ru": "Деятельность библиотек, архивов, музеев и других учреждений культуры",
+   "uz": "Kutubxonalar, arxivlar, muzeylar va boshqa madaniyat muassasalari"
+  },
+  "92": {
+   "s": "R",
+   "ru": "Деятельность по организации азартных игр и заключения пари",
+   "uz": "Azartli oʻyinlarni tashkil qilish va garov tuzish boʻyicha xizmatlar"
+  },
+  "93": {
+   "s": "R",
+   "ru": "Деятельность в области спорта, организации отдыха и развлечений",
+   "uz": "Sport, dam olishni va koʻngil ochishni tashkil etish sohasidagi faoliyat"
+  },
+  "94": {
+   "s": "S",
+   "ru": "Деятельность членских организаций",
+   "uz": "Aʼzolik tashkilotlari faoliyati"
+  },
+  "95": {
+   "s": "S",
+   "ru": "Ремонт компьютеров, предметов личного пользования и бытовых товаров",
+   "uz": "Kompyuterlarni, shaxsiy foydalanish buyumlari va maishiy tovarlarni taʼmirlash"
+  },
+  "96": {
+   "s": "S",
+   "ru": "Предоставление прочих индивидуальных услуг",
+   "uz": "Boshqa shaxsiy xizmatlar koʻrsatish"
+  },
+  "97": {
+   "s": "T",
+   "ru": "Деятельность домашних хозяйств, нанимающих домашнюю прислугу",
+   "uz": "Uy xizmatchilari yollovchi uy xoʻjaliklari faoliyati"
+  },
+  "98": {
+   "s": "T",
+   "ru": "Производство домашними хозяйствами разнообразных товаров и услуг для собственного потребления",
+   "uz": "Uy xoʻjaliklari tomonidan oʻz isteʼmoli uchun turli tovarlar va xizmatlar ishlab chiqarish"
+  },
+  "99": {
+   "s": "U",
+   "ru": "Деятельность экстерриториальных организаций",
+   "uz": "Eksterritorial tashkilotlar faoliyati"
+  }
+ }
+}
