@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monita Bot · Тест-панель</title>
+<style>
+  :root{--blue:#1d4ed8;--blue2:#2563eb;--bg:#f1f5fb;--card:#fff;--text:#0f172a;--muted:#64748b;
+        --line:#e2e8f0;--ok:#16a34a;--bad:#dc2626;--warn:#d97706;--soft:#eff6ff}
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text)}
+  header{background:linear-gradient(120deg,#1e3a8a,#2563eb);color:#fff;padding:22px 28px}
+  header h1{margin:0;font-size:22px;display:flex;align-items:center;gap:10px}
+  header p{margin:4px 0 0;opacity:.85}
+  main{max-width:1180px;margin:0 auto;padding:22px;display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+  .c12{grid-column:span 12}.c7{grid-column:span 7}.c5{grid-column:span 5}
+  @media(max-width:900px){.c7,.c5{grid-column:span 12}}
+  h2{margin:0 0 12px;font-size:16px;display:flex;align-items:center;gap:8px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+  .stat{background:var(--soft);border-radius:12px;padding:12px 14px}
+  .stat b{display:block;font-size:22px}
+  .stat span{color:var(--muted);font-size:13px}
+  .pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600}
+  .ok{background:#dcfce7;color:var(--ok)}.bad{background:#fee2e2;color:var(--bad)}.warn{background:#fef3c7;color:var(--warn)}
+  textarea,select,input{width:100%;font:inherit;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fff}
+  textarea{min-height:84px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:10px 0}
+  .chips label{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line);border-radius:99px;padding:5px 11px;cursor:pointer;background:#fff;user-select:none}
+  .chips input{width:auto}
+  .chips label:has(input:checked){background:var(--soft);border-color:var(--blue2);color:var(--blue)}
+  button{font:inherit;font-weight:600;border:0;border-radius:10px;padding:10px 16px;cursor:pointer;background:var(--blue2);color:#fff}
+  button.ghost{background:#fff;color:var(--blue);border:1px solid var(--blue2)}
+  button:disabled{opacity:.6;cursor:wait}
+  .answer{white-space:pre-wrap;background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:12px;min-height:40px}
+  .src{margin:6px 0;font-size:14px}.src a{color:var(--blue)}
+  details{margin-top:10px}summary{cursor:pointer;color:var(--muted)}
+  pre{white-space:pre-wrap;font-size:12px;background:#0f172a;color:#e2e8f0;padding:12px;border-radius:10px;max-height:340px;overflow:auto}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;position:sticky;top:0;background:#fff}
+  .tablewrap{max-height:430px;overflow:auto;border:1px solid var(--line);border-radius:10px}
+  .muted{color:var(--muted)} .small{font-size:13px}
+  .demo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .chunk{border-left:3px solid var(--blue2);padding:6px 10px;margin:8px 0;background:#f8fafc;border-radius:6px;font-size:13.5px}
+</style>
+</head>
+<body>
+<header>
+  <h1>⚖️ Monita Bot · тест-панель</h1>
+  <p>Проверка бота без Telegram: состояние системы, AI-ответы с источниками, поиск по законам, демо-уведомления.</p>
+</header>
+<main>
+  <section class="card c12">
+    <h2>🩺 Состояние системы <button class="ghost" style="margin-left:auto;padding:6px 12px" onclick="loadStatus()">Обновить</button></h2>
+    <div class="stats" id="stats"><div class="muted">Загрузка…</div></div>
+    <div class="small muted" id="statusNote" style="margin-top:10px"></div>
+  </section>
+
+  <section class="card c7">
+    <h2>🤖 Тест AI-помощника</h2>
+    <textarea id="q" placeholder="Например: Как получить лицензию на торговлю? / Litsenziya olish tartibi qanday?">Какой порядок проверок субъектов предпринимательства?</textarea>
+    <div class="row chips" id="sectors"></div>
+    <div class="row">
+      <select id="lang" style="width:auto"><option value="ru">🇷🇺 Русский</option><option value="uz">🇺🇿 O'zbekcha</option></select>
+      <button id="askBtn" onclick="ask()">Спросить Gemma</button>
+      <button class="ghost" onclick="search()">Только поиск (без AI)</button>
+      <span class="muted small" id="askInfo"></span>
+    </div>
+    <div class="answer" id="answer"><span class="muted">Здесь появится ответ.</span></div>
+    <div id="sources"></div>
+    <details><summary>Контекст, который получила модель</summary><pre id="ctx">—</pre></details>
+  </section>
+
+  <section class="card c5">
+    <h2>🧪 Демо-уведомления в Telegram</h2>
+    <p class="small muted">Отправляются <b>только админам</b> (ADMIN_IDS), выглядят как настоящие — с пометкой «Демо».</p>
+    <div class="demo">
+      <button class="ghost" onclick="demo('new')">📚 Новый НПА</button>
+      <button class="ghost" onclick="demo('chg')">✏️ Изменение акта</button>
+      <button class="ghost" onclick="demo('news')">📰 Новость</button>
+      <button class="ghost" onclick="demo('rem')">⏰ Напоминание</button>
+    </div>
+    <div class="small" id="demoRes" style="margin-top:10px"></div>
+    <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+    <h2>🔎 Найденные статьи</h2>
+    <div id="chunks" class="small muted">Нажмите «Только поиск», чтобы увидеть, какие статьи бот находит по вопросу.</div>
+  </section>
+
+  <section class="card c12">
+    <h2>📚 Акты по сферам <span class="muted small" id="actsCount" style="font-weight:400"></span></h2>
+    <div class="row chips" id="actSectors"></div>
+    <div class="tablewrap"><table><thead><tr><th>Текст</th><th>Вид · реквизиты</th><th>Название</th><th>ОКЭД</th><th>Вступил</th></tr></thead><tbody id="acts"></tbody></table></div>
+  </section>
+</main>
+<script>
+const KEY = new URLSearchParams(location.search).get('key') || '';
+const api = (p, body) => fetch('/panel/api/' + p + (p.includes('?') ? '&' : '?') + 'key=' + encodeURIComponent(KEY),
+  body ? {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body)} : {})
+  .then(r => r.json());
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pill = (ok, yes, no) => `<span class="pill ${ok ? 'ok' : 'bad'}">${ok ? yes : no}</span>`;
+let SECTORS = {};
+
+function chips(el, name, checked) {
+  el.innerHTML = Object.entries(SECTORS).map(([k, v]) =>
+    `<label><input type="checkbox" name="${name}" value="${k}" ${checked.includes(k) ? 'checked' : ''}>${v.emoji} ${esc(v.ru)}</label>`).join('');
+}
+const picked = name => [...document.querySelectorAll(`input[name=${name}]:checked`)].map(i => i.value);
+
+async function loadStatus() {
+  const d = await api('status');
+  if (d.error) { document.getElementById('stats').innerHTML = `<span class="pill bad">${esc(d.error)}</span>`; return; }
+  if (!Object.keys(SECTORS).length) {
+    SECTORS = d.sectors;
+    chips(document.getElementById('sectors'), 'sec', ['savdo']);
+    chips(document.getElementById('actSectors'), 'asec', []);
+    document.getElementById('actSectors').addEventListener('change', loadActs);
+    loadActs();
+  }
+  const st = d.stats || {}, ac = d.acts || {}, wh = d.webhook || {};
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><span>База данных</span><b>${pill(d.db_ok, 'OK', 'Ошибка')}</b><span>${esc(d.db)}</span></div>
+    <div class="stat"><span>Пользователи</span><b>${st.total ?? '—'}</b><span>активных: ${st.active ?? '—'}</span></div>
+    <div class="stat"><span>Акты в реестре</span><b>${ac.acts ?? '—'}</b><span>с текстом: ${ac.with_text ?? 0} · фрагм.: ${ac.chunks ?? 0}</span></div>
+    <div class="stat"><span>AI (Gemma)</span><b>${pill(d.ai.configured, 'настроен', 'нет ключа')}</b><span>${esc(d.ai.provider)} · ${esc(d.ai.model)}</span></div>
+    <div class="stat"><span>Telegram</span><b>${pill(d.mode === 'polling' || wh.url_set, d.mode, 'нет webhook')}</b><span>${wh.last_error ? '⚠️ ' + esc(wh.last_error) : 'ошибок нет'}</span></div>
+    <div class="stat"><span>Проверка Lex.uz</span><b style="font-size:15px">${esc(d.last_check || '—')}</b><span>${d.loading ? '⏳ идёт загрузка' : 'админов: ' + d.admins}</span></div>`;
+  const notes = [];
+  if (!d.db_ok) notes.push('❌ База недоступна — проверьте DATABASE_URL.');
+  if (String(d.db).startsWith('SQLite')) notes.push('⚠️ SQLite на Render стирается при перезапуске — задайте DATABASE_URL (Neon).');
+  if (!ac.with_text) notes.push('📥 Тексты законов ещё не загружены: отправьте боту /yuklash 3, затем /yuklash.');
+  if (!d.ai.configured) notes.push('🔑 Добавьте GEMINI_API_KEY в Render → Environment.');
+  document.getElementById('statusNote').innerHTML = notes.join('<br>') || '✅ Всё настроено.';
+}
+
+async function ask() {
+  const btn = document.getElementById('askBtn'); btn.disabled = true;
+  document.getElementById('answer').textContent = 'Gemma думает…';
+  const t0 = Date.now();
+  const r = await api('ask', {question: q.value, sectors: picked('sec'), lang: lang.value});
+  btn.disabled = false;
+  document.getElementById('askInfo').textContent = `${((Date.now() - t0) / 1000).toFixed(1)} с`;
+  document.getElementById('answer').innerHTML = r.error ? `<span class="pill bad">${esc(r.error)}</span>` :
+    esc(r.answer).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/^\s*[\*\-]\s+/gm, '• ');
+  document.getElementById('sources').innerHTML = (r.sources || []).length ?
+    '<div class="src"><b>📚 Источники:</b></div>' + r.sources.map(s =>
+      `<div class="src">• <a href="${esc(s.url)}" target="_blank">${esc(s.title)}</a>, ${esc(s.path)}</div>`).join('') :
+    '<div class="src muted">Статей из базы не найдено — ответ из общих знаний модели.</div>';
+  document.getElementById('ctx').textContent = r.context || '—';
+}
+
+async function search() {
+  const r = await api('search', {question: q.value, sectors: picked('sec')});
+  const el = document.getElementById('chunks');
+  if (r.error) { el.innerHTML = `<span class="pill bad">${esc(r.error)}</span>`; return; }
+  el.innerHTML = `<div class="muted">Слова поиска: <b>${esc(r.terms.join(', ') || '—')}</b> · актов в сфере: ${r.acts_in_scope}</div>` +
+    (r.chunks.length ? r.chunks.map(c => `<div class="chunk"><b>${esc(c.path)}</b> ${esc(c.heading || '')}
+      <span class="muted">· ${esc(c.lang)} · score ${c.score}</span><br><a href="${esc(c.url)}" target="_blank">${esc(c.title)}</a>
+      <div class="muted" style="margin-top:4px">${esc(c.content.slice(0, 260))}…</div></div>`).join('')
+    : '<div style="margin-top:8px">Ничего не найдено. Загружены ли тексты (/yuklash)?</div>');
+}
+
+async function demo(kind) {
+  const r = await api('demo', {kind});
+  document.getElementById('demoRes').innerHTML = r.error ? `<span class="pill bad">${esc(r.error)}</span>`
+    : `<span class="pill ok">Отправлено: ${r.sent}</span> ${r.failed ? `<span class="pill bad">ошибок: ${r.failed}</span>` : ''} — проверьте Telegram.`;
+}
+
+async function loadActs() {
+  const sec = picked('asec');
+  const rows = await api('acts' + (sec.length ? '?sectors=' + sec.join(',') : ''));
+  if (rows.error) return;
+  document.getElementById('actsCount').textContent = `· ${rows.length} актов, с текстом: ${rows.filter(r => r.has_text).length}`;
+  document.getElementById('acts').innerHTML = rows.map(r => `<tr>
+    <td>${r.has_text ? '📄' : '▫️'}</td>
+    <td><b>${esc(r.act_type)}</b><br><span class="muted">${esc(r.requisites)}</span></td>
+    <td><a href="${esc(r.url)}" target="_blank">${esc(r.title)}</a>${r.source === 'admin' ? ' <span class="pill warn">добавлен админом</span>' : ''}</td>
+    <td>${r.oked === 'ALL' ? '🌍 все' : esc(r.oked)}</td><td class="muted">${esc(r.effective || '—')}</td></tr>`).join('');
+}
+loadStatus();
+</script>
+</body>
+</html>
